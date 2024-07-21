@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using DictionaryApp.Services;
 using DictionaryApp.Pages;
+using DictionaryApp.ViewModels;
 
 namespace DictionaryApp
 {
@@ -25,6 +26,7 @@ namespace DictionaryApp
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<AdminPage>();
             builder.Services.AddTransient<DictionaryService>();
+            builder.Services.AddTransient<WordResponsesViewModel>();
 
             return builder.Build();
         }

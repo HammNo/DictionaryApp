@@ -2104,3 +2104,4 @@ C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\D
 C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\obj\Debug\net8.0-android\android\marshal_methods.x86_64.o
 C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\obj\Debug\net8.0-android\android\jni_remap.x86_64.o
 C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\obj\Debug\net8.0-android\app_shared_libraries\x86_64\libxamarin-app.so
+C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\obj\Debug\net8.0-android\DictionaryApp.sourcelink.json

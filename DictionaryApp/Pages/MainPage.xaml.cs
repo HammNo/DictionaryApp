@@ -2,35 +2,29 @@
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Views;
 using DictionaryApp.Contents;
-using DictionaryApp.Models;
-using DictionaryApp.Services;
-using System.Collections.ObjectModel;
+using DictionaryApp.ViewModels;
 
 namespace DictionaryApp.Pages
 {
     public partial class MainPage : ContentPage
     {
-        private readonly DictionaryService _dictionaryService;
-        private readonly ObservableCollection<WordResponseModel> LocalWordResponses = [];
-        private const int DefinitionMaxSize = 80;
-        public MainPage(DictionaryService dictionaryService)
+        private readonly WordResponsesViewModel _wordResponsesViewModel;
+
+        public MainPage(WordResponsesViewModel wordResponsesViewModel)
         {
             InitializeComponent();
-            _dictionaryService = dictionaryService;
-            BindingContext = this;
-            WordsCollectionView.ItemsSource = LocalWordResponses;
+            BindingContext = wordResponsesViewModel;
+            _wordResponsesViewModel = wordResponsesViewModel;
             ClearImageButton.IsVisible = false;
         }
 
         public async void OnCompleted(object sender, EventArgs e)
         {
-            LocalWordResponses.Clear();
             if (!string.IsNullOrEmpty(Word.Text))
             {
                 var popup = new SpinnerPopup();
                 this.ShowPopup(popup);
-                var result = await _dictionaryService.RetrieveWordResponsesAsync(Word.Text);
-                result?.ForEach(wr => LocalWordResponses.Add(ProcessWordResponse(wr)));
+                await _wordResponsesViewModel.SearchWord(Word.Text);
                 ClearImageButton.IsVisible = true;
                 popup.Close();
             }
@@ -45,22 +39,11 @@ namespace DictionaryApp.Pages
             Word.IsEnabled = true;
         }
 
-        private WordResponseModel ProcessWordResponse(WordResponseModel wordResponse)
-        {
-            WordResponseModel wordResponseCopy = (WordResponseModel)wordResponse.Clone();
 
-            if (wordResponseCopy.Meta.Id.Contains(':'))
-                wordResponseCopy.Meta.Id = wordResponseCopy.Meta.Id.Split(':')[0];
-
-            if (wordResponseCopy.ShortDef != null && wordResponseCopy.ShortDef.Count > 0 
-                && wordResponseCopy.ShortDef[0].Length >= DefinitionMaxSize)
-                wordResponseCopy.ShortDef[0] = $"{wordResponseCopy.ShortDef[0][..DefinitionMaxSize]} [...]";
-            return wordResponseCopy;
-        }
 
         private void ManageWordResponsesCount()
         {
-            short resultsNumber = (short)LocalWordResponses.Count;
+            short resultsNumber = (short)_wordResponsesViewModel.ModifiedWordResponsesList.Count;
             if (resultsNumber == 0)
                 ResultsCountLabel.Text = "No result";
             else
@@ -70,7 +53,7 @@ namespace DictionaryApp.Pages
         private async void OnClearButtonClicked(object sender, EventArgs args)
         {
             Word.Text = string.Empty;
-            LocalWordResponses.Clear();
+            _wordResponsesViewModel.ModifiedWordResponsesList.Clear();
             ManageWordResponsesCount();
             ClearImageButton.IsVisible = false;
 
@@ -86,7 +69,7 @@ namespace DictionaryApp.Pages
 
         private async void MatchingEntryFoundShowSnackbar()
         {
-            short wordResponsesCount = (short)LocalWordResponses.Count;
+            short wordResponsesCount = (short)_wordResponsesViewModel.ModifiedWordResponsesList.Count;
 
             string message = string.Empty;
             Color backgroundColor = default!;

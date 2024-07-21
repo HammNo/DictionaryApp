@@ -7,12 +7,28 @@
       "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\viewmodels\\wordresponsesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\viewmodels\\wordresponsesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\services\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\services\\dictionaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\models\\wordresponsestoragemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\models\\wordresponsestoragemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\models\\wordresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\models\\wordresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\contents\\spinnerpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -21,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\contents\\spinnerpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\contents\\spinnerpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|solutionrelative:dictionaryapp\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6840BC27-D2FB-42B2-A4B8-01F43AF83C2A}|DictionaryApp\\DictionaryApp.csproj|c:\\users\\solanin\\documents\\fardes documents\\code\\c#\\source\\repos\\dictionaryapp\\dictionaryapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -174,7 +186,98 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WordResponseStorageModel.cs",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Models\\WordResponseStorageModel.cs",
+              "RelativeDocumentMoniker": "DictionaryApp\\Models\\WordResponseStorageModel.cs",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Models\\WordResponseStorageModel.cs",
+              "RelativeToolTip": "DictionaryApp\\Models\\WordResponseStorageModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T11:09:15.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "DictionaryApp\\Pages\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml.cs",
+              "RelativeToolTip": "DictionaryApp\\Pages\\MainPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T16:48:36.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WordResponsesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\ViewModels\\WordResponsesViewModel.cs",
+              "RelativeDocumentMoniker": "DictionaryApp\\ViewModels\\WordResponsesViewModel.cs",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\ViewModels\\WordResponsesViewModel.cs",
+              "RelativeToolTip": "DictionaryApp\\ViewModels\\WordResponsesViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T13:02:53.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "DictionaryService.cs",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Services\\DictionaryService.cs",
+              "RelativeDocumentMoniker": "DictionaryApp\\Services\\DictionaryService.cs",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Services\\DictionaryService.cs",
+              "RelativeToolTip": "DictionaryApp\\Services\\DictionaryService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAIwBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T16:24:04.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "DictionaryApp\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\MauiProgram.cs",
+              "RelativeToolTip": "DictionaryApp\\MauiProgram.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAwwBwAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T16:19:20.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml",
+              "RelativeDocumentMoniker": "DictionaryApp\\Pages\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml",
+              "RelativeToolTip": "DictionaryApp\\Pages\\MainPage.xaml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAC0AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-17T20:16:24.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WordResponseModel.cs",
+              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Models\\WordResponseModel.cs",
+              "RelativeDocumentMoniker": "DictionaryApp\\Models\\WordResponseModel.cs",
+              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Models\\WordResponseModel.cs",
+              "RelativeToolTip": "DictionaryApp\\Models\\WordResponseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T11:09:36.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SpinnerPopup.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Contents\\SpinnerPopup.xaml",
               "RelativeDocumentMoniker": "DictionaryApp\\Contents\\SpinnerPopup.xaml",
@@ -186,20 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "DictionaryApp\\Pages\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml.cs",
-              "RelativeToolTip": "DictionaryApp\\Pages\\MainPage.xaml.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAmwCYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T16:48:36.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "SpinnerPopup.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Contents\\SpinnerPopup.xaml.cs",
               "RelativeDocumentMoniker": "DictionaryApp\\Contents\\SpinnerPopup.xaml.cs",
@@ -211,31 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DictionaryService.cs",
-              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Services\\DictionaryService.cs",
-              "RelativeDocumentMoniker": "DictionaryApp\\Services\\DictionaryService.cs",
-              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Services\\DictionaryService.cs",
-              "RelativeToolTip": "DictionaryApp\\Services\\DictionaryService.cs",
-              "ViewState": "AQIAAKoAAAAAAAAAAAAuwBEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T16:24:04.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "DictionaryApp\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\MauiProgram.cs",
-              "RelativeToolTip": "DictionaryApp\\MauiProgram.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T16:19:20.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "AdminPage.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\AdminPage.xaml",
               "RelativeDocumentMoniker": "DictionaryApp\\Pages\\AdminPage.xaml",
@@ -247,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Platforms\\Windows\\App.xaml",
               "RelativeDocumentMoniker": "DictionaryApp\\Platforms\\Windows\\App.xaml",
@@ -259,19 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml",
-              "RelativeDocumentMoniker": "DictionaryApp\\Pages\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Pages\\MainPage.xaml",
-              "RelativeToolTip": "DictionaryApp\\Pages\\MainPage.xaml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAABwAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-17T20:16:24.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\App.xaml",
               "RelativeDocumentMoniker": "DictionaryApp\\App.xaml",
@@ -279,11 +333,12 @@
               "RelativeToolTip": "DictionaryApp\\App.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-17T20:14:02.455Z"
+              "WhenOpened": "2024-07-17T20:14:02.455Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\AppShell.xaml",
               "RelativeDocumentMoniker": "DictionaryApp\\AppShell.xaml",
@@ -295,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "DictionaryApp.csproj",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\DictionaryApp.csproj",
               "RelativeDocumentMoniker": "DictionaryApp\\DictionaryApp.csproj",
@@ -307,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "app.manifest",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Platforms\\Windows\\app.manifest",
               "RelativeDocumentMoniker": "DictionaryApp\\Platforms\\Windows\\app.manifest",
@@ -319,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "DictionaryApp",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\DictionaryApp.csproj",
               "RelativeDocumentMoniker": "DictionaryApp\\DictionaryApp.csproj",
@@ -330,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Package.appxmanifest",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Platforms\\Windows\\Package.appxmanifest",
               "RelativeDocumentMoniker": "DictionaryApp\\Platforms\\Windows\\Package.appxmanifest",
@@ -341,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Platforms\\Windows\\App.xaml.cs",
               "RelativeDocumentMoniker": "DictionaryApp\\Platforms\\Windows\\App.xaml.cs",
@@ -353,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\DictionaryApp\\DictionaryApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "DictionaryApp\\Properties\\launchSettings.json",
@@ -365,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "app.manifest",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\app.manifest",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\app.manifest",
@@ -377,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\AppShell.xaml",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\AppShell.xaml",
@@ -389,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\App.xaml.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\App.xaml.cs",
@@ -401,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Properties\\launchSettings.json",
@@ -413,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Package.appxmanifest",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\Package.appxmanifest",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\Package.appxmanifest",
@@ -424,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\App.xaml.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\App.xaml.cs",
@@ -436,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\App.xaml",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Windows\\App.xaml",
@@ -448,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "DictionaryService.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Services\\DictionaryService.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Services\\DictionaryService.cs",
@@ -460,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\AppShell.xaml.cs",
@@ -472,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\MauiProgram.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\MauiProgram.cs",
@@ -484,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "DictionaryApp.csproj",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\DictionaryApp.csproj",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\DictionaryApp.csproj",
@@ -496,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "AdminPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Pages\\AdminPage.xaml.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Pages\\AdminPage.xaml.cs",
@@ -508,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "AdminPage.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Pages\\AdminPage.xaml",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Pages\\AdminPage.xaml",
@@ -520,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\App.xaml",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\App.xaml",
@@ -532,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "WordResponseStorageModelExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Extensions\\WordResponseStorageModelExtensions.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Extensions\\WordResponseStorageModelExtensions.cs",
@@ -544,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "WordResponseStorageModel.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Models\\WordResponseStorageModel.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Models\\WordResponseStorageModel.cs",
@@ -556,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "WordResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Models\\WordResponseModel.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Models\\WordResponseModel.cs",
@@ -568,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "AppDelegate.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\MacCatalyst\\AppDelegate.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\MacCatalyst\\AppDelegate.cs",
@@ -580,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Pages\\MainPage.xaml",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Pages\\MainPage.xaml",
@@ -592,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Pages\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Pages\\MainPage.xaml.cs",
@@ -604,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "AppDelegate.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\iOS\\AppDelegate.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\iOS\\AppDelegate.cs",
@@ -616,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "MainActivity.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Android\\MainActivity.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Android\\MainActivity.cs",
@@ -628,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Tizen\\Main.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Tizen\\Main.cs",
@@ -640,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\MacCatalyst\\Program.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\MacCatalyst\\Program.cs",
@@ -652,7 +707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\iOS\\Program.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\iOS\\Program.cs",
@@ -664,7 +719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "App.g.i.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
@@ -676,7 +731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "MainApplication.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Platforms\\Android\\MainApplication.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Platforms\\Android\\MainApplication.cs",
@@ -688,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Models\\MainViewModel.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Models\\MainViewModel.cs",
@@ -700,7 +755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "SpinnerPopup.xaml",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Contents\\SpinnerPopup.xaml",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Contents\\SpinnerPopup.xaml",
@@ -712,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "SpinnerPopup.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\Documents\\Fardes documents\\Code\\C#\\source\\repos\\MyLibraryApp\\MyLibraryApp\\Contents\\SpinnerPopup.xaml.cs",
               "RelativeDocumentMoniker": "..\\MyLibraryApp\\MyLibraryApp\\Contents\\SpinnerPopup.xaml.cs",
@@ -724,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Solanin\\.nuget\\packages\\communitytoolkit.maui\\9.0.2\\ReadMe.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui\\9.0.2\\ReadMe.txt",
@@ -736,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "MainPage.xaml.sg.cs",
               "DocumentMoniker": "C:\\Users\\Solanin\\AppData\\Local\\Temp\\.vsdbgsrc\\d3e6947e98cd3c0873b50dc938ef92de7b19ea9c\\MainPage.xaml.sg.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\d3e6947e98cd3c0873b50dc938ef92de7b19ea9c\\MainPage.xaml.sg.cs",
