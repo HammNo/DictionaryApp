@@ -57,14 +57,18 @@ namespace DictionaryApp.Pages
             ManageWordResponsesCount();
             ClearImageButton.IsVisible = false;
 
-            var snackbar = Snackbar.Make("Search cleared", actionButtonText: string.Empty,
-                                    duration: TimeSpan.FromSeconds(3), visualOptions: new SnackbarOptions
-                                    {
-                                        TextColor = Colors.Black,
-                                        CornerRadius = 30,
-                                        BackgroundColor = Colors.Salmon
-                                    });
-            await snackbar.Show();
+            //Problème avec affichage Snackbar sous Windows
+            if (DeviceInfo.Current.Platform != DevicePlatform.WinUI)
+            {
+                var snackbar = Snackbar.Make("Search cleared", actionButtonText: string.Empty,
+                                        duration: TimeSpan.FromSeconds(3), visualOptions: new SnackbarOptions
+                                        {
+                                            TextColor = Colors.Black,
+                                            CornerRadius = 30,
+                                            BackgroundColor = Colors.Salmon
+                                        });
+                await snackbar.Show();
+            }
         }
 
         private async void MatchingEntryFoundShowSnackbar()
@@ -84,15 +88,21 @@ namespace DictionaryApp.Pages
                 backgroundColor = Colors.DarkSeaGreen;
             }
 
-            ISnackbar snackbar = Snackbar.Make(message, actionButtonText: string.Empty,
-                        duration: TimeSpan.FromSeconds(3), visualOptions: new SnackbarOptions
-                        {
-                            TextColor = Colors.Black,
-                            CornerRadius = 30,
-                            BackgroundColor = backgroundColor
-                        });
+            //Problème avec affichage Snackbar sous Windows
+            if (DeviceInfo.Current.Platform != DevicePlatform.WinUI)
+            {
+                ISnackbar snackbar = Snackbar.Make(message, actionButtonText: string.Empty,
+                                                duration: TimeSpan.FromSeconds(3), 
+                                                visualOptions: new SnackbarOptions
+                                                {
+                                                    TextColor = Colors.Black,
+                                                    CornerRadius = 30,
+                                                    BackgroundColor = backgroundColor
+                                                });
 
-            await snackbar.Show();
+                await snackbar.Show();
+            }
+
         }
     }
 }

@@ -8,7 +8,7 @@ namespace DictionaryApp.ViewModels
     public partial class WordResponsesViewModel : ObservableObject
     {
         public ObservableCollection<WordResponseModel> ModifiedWordResponsesList { get; set; } = [];
-        public ObservableCollection<WordResponseModel> OriginalResponsesList { get; set; } = [];
+        private readonly ObservableCollection<WordResponseModel> _originalResponsesList = [];
         private readonly DictionaryService _dictionaryService;
         private const int DefinitionMaxSize = 80;
 
@@ -20,10 +20,11 @@ namespace DictionaryApp.ViewModels
         public async Task SearchWord(string word)
         {
             var responses = await _dictionaryService.RetrieveWordResponsesAsync(word);
-            OriginalResponsesList.Clear();
-            responses?.ForEach(wr => OriginalResponsesList.Add(wr));
+            _originalResponsesList.Clear();
+            responses?.ForEach(wr => _originalResponsesList.Add(wr));
             ModifiedWordResponsesList.Clear();
-            OriginalResponsesList.ToList().ForEach(wr => ModifiedWordResponsesList.Add(ProcessWordResponse(wr)));
+            _originalResponsesList.ToList()
+                .ForEach(wr => ModifiedWordResponsesList.Add(ProcessWordResponse(wr)));
         }
 
         private WordResponseModel ProcessWordResponse(WordResponseModel wordResponse)
