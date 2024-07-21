@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DictionaryApp.Models"
+             x:Class="DictionaryApp.Pages.MainPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*" />
+            <RowDefinition Height=".9*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*" />
+            <ColumnDefinition Width=".5*" />
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  >
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".2*" />
+                    <ColumnDefinition Width=".6*" />
+                    <ColumnDefinition Width=".2*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry Grid.Column="1" x:Name="Word" Placeholder="Type your word" Completed="OnCompleted" ClearButtonVisibility="Never" 
+                       HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="200"/>
+
+                <ImageButton  Grid.Column="2" x:Name="ClearImageButton" Source="Resources/Images/clear_icon_red.png" Clicked="OnClearButtonClicked"
+                              WidthRequest="25" HeightRequest="25" HorizontalOptions="Start"/>
+                        
+            </Grid>
+
+            <Label Text="No result" x:Name="ResultsCountLabel" FontSize="13" 
+                   FontAttributes="Italic" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
+
+         </VerticalStackLayout>
+
+        <CollectionView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                        x:Name="WordsCollectionView" ItemsLayout="VerticalList" EmptyView="">
+            
+            <CollectionView.ItemTemplate>
+                
+                <DataTemplate x:DataType="vm:WordResponseModel">
+                    
+                    <Frame Margin="10" Padding="15,10,15,10" HeightRequest="100">
+                        
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            
+                            <Label Margin="0,0,0,10" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
+                                <Label.Text>
+                                    <MultiBinding StringFormat="{}{0} ({1})">
+                                        <Binding Path="Meta.Id" />
+                                        <Binding Path="Fl" />
+                                    </MultiBinding>
+                                </Label.Text>
+                            </Label>
+                            
+                            <Label Text="{Binding ShortDef[0]}" HorizontalOptions="Center" FontSize="15"/>
+                            
+                        </VerticalStackLayout>
+                        
+                    </Frame>
+                    
+                </DataTemplate>
+                
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+        
+    </Grid>
+
+</ContentPage>
