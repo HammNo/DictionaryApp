@@ -19,50 +19,50 @@ namespace DictionaryApp.Services
 
         public async Task<List<WordResponseStorageModel>?> RetrieveWordResponsesAsync(string requestedWord, bool extensiveSearch = false)
         {
-            List<WordResponseStorageModel>? wordResponses 
-                = await RetrieveWordResponsesFromJSON(requestedWord);
+            using (FileStream stream = File.Open(_jsonFileService.WordResponsesFileFullPath, FileMode.OpenOrCreate))
+            {
+                List<WordResponseStorageModel>? wordResponsesFileCollection;
+                List<WordResponseStorageModel>? wordResponses;
 
-            if (wordResponses != null)
+                (wordResponses, wordResponsesFileCollection) = await RetrieveWordResponsesFromJSON(requestedWord, stream);
+
+                if (wordResponses != null)
+                    return wordResponses;
+
+                wordResponses = (await GetWordResponsesFromAPI(requestedWord))?
+                                .Select(wr => new WordResponseStorageModel().FromBase(wr)).ToList();
+
+                if (wordResponses != null && wordResponses.Count > 0)
+                    await WriteWordResponsesInJSON(wordResponses, requestedWord, wordResponsesFileCollection, stream);
+
                 return wordResponses;
-
-            wordResponses = (await GetWordResponsesFromAPI(requestedWord))?
-                            .Select(wr => new WordResponseStorageModel().FromBase(wr)).ToList();
-
-            if (wordResponses != null && wordResponses.Count > 0)
-                await WriteWordResponsesInJSON(wordResponses, requestedWord);
-
-            return wordResponses;
+            }
         }
 
-        private async Task<List<WordResponseStorageModel>?> RetrieveWordResponsesFromJSON(string requestedWord)
+        private async Task<(List<WordResponseStorageModel>?, List<WordResponseStorageModel>?)> RetrieveWordResponsesFromJSON(string requestedWord, FileStream stream)
         {
             List<WordResponseStorageModel>? wordResponses = null;
 
-            if (!_jsonFileService.CreateJSONFile())
-            {
-                List<WordResponseStorageModel>? wordResponsesFileCollection 
-                    = await _jsonFileService.RetrieveWordResponsesFromStorage();
+            List<WordResponseStorageModel>? wordResponsesFileCollection
+                = await _jsonFileService.RetrieveWordResponsesFromStorage(stream);
 
-                if (wordResponsesFileCollection != null)
-                    wordResponses = await ReadWordFromJSON(requestedWord, wordResponsesFileCollection);
-            }
+            if (wordResponsesFileCollection != null)
+                (wordResponses, wordResponsesFileCollection) = await ReadWordFromJSON(requestedWord, wordResponsesFileCollection, stream);
 
-            return wordResponses;
+            return (wordResponses, wordResponsesFileCollection);
         }
 
-        private async Task<List<WordResponseStorageModel>?> ReadWordFromJSON(string requestedWord, List<WordResponseStorageModel> wordResponsesFileCollection)
+        private async Task<(List<WordResponseStorageModel>?, List<WordResponseStorageModel>?)> ReadWordFromJSON(string requestedWord, List<WordResponseStorageModel> wordResponsesFileCollection, FileStream stream)
         {
             List<WordResponseStorageModel>? wordResponses = null;
 
             List<WordResponseStorageModel>? wordResponsesFileCollectionCopy = new(wordResponsesFileCollection);
 
-            bool foundOutOfDateWordResponses = false;
             foreach (var wordOccurence in wordResponsesFileCollection)
             {
                 if (wordOccurence?.StorageDate.AddMinutes(StorageTimeInMinutes) < DateTime.Now)
                 {
                     wordResponsesFileCollectionCopy.Remove(wordOccurence);
-                    foundOutOfDateWordResponses = true;
                 }
                 else
                 {
@@ -76,15 +76,8 @@ namespace DictionaryApp.Services
                     }
                 }
             }
-
-            if (foundOutOfDateWordResponses)
-            {
-                string jsonString = JsonSerializer.Serialize(wordResponsesFileCollectionCopy);
-
-                await _jsonFileService.WriteWordResponses(jsonString);
-            }
             
-            return wordResponses;
+            return (wordResponses, wordResponsesFileCollectionCopy);
         }
 
 
@@ -103,11 +96,8 @@ namespace DictionaryApp.Services
             return wordResponses;
         }
 
-        private async Task WriteWordResponsesInJSON(List<WordResponseStorageModel> wordResponses, string requestedWord)
+        private async Task WriteWordResponsesInJSON(List<WordResponseStorageModel> wordResponses, string requestedWord, List<WordResponseStorageModel>? wordResponsesFileCollection, FileStream stream)
         {
-            List<WordResponseStorageModel>? wordResponsesFileCollection = 
-                await _jsonFileService.RetrieveWordResponsesFromStorage(); 
-
             wordResponsesFileCollection ??= new List<WordResponseStorageModel>();
 
             wordResponses.ForEach((wr) =>
@@ -120,7 +110,9 @@ namespace DictionaryApp.Services
 
             string jsonString = JsonSerializer.Serialize(wordResponsesFileCollection);
 
-            await _jsonFileService.WriteWordResponses(jsonString);
+            _jsonFileService.ClearJSONFile(stream);
+
+            await _jsonFileService.WriteJsonData(jsonString, stream);
         }
     }
 }

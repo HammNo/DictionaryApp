@@ -1,68 +1,99 @@
 ﻿using DictionaryApp.Models;
+using System.Text;
 using System.Text.Json;
 
 namespace DictionaryApp.Services
 {
     public class JsonFileService
     {
+        public string WordResponsesFileFullPath { get; set; } = string.Empty;
+        private const string DefaultWordResponsesFileName = "WordsCache.json";
+        private const short DefaultStorageTime = 10;
 
-        private readonly string JSONFileFullPath = string.Empty;
-        private const string JSONFileName = "WordsCache.json";
+        public string ConfigurationFileFullPath { get; set; } = string.Empty;
+        private const string ConfigurationFileName = "Configuration.json";
+
+        private ConfigurationModel? _configuration = new();
 
         public JsonFileService()
         {
-            JSONFileFullPath = Path.Combine(FileSystem.Current.CacheDirectory, JSONFileName);
+            ConfigurationFileFullPath = Path.Combine(FileSystem.Current.CacheDirectory, ConfigurationFileName);
+
+            _ = Initialize();
         }
 
-        public bool CreateJSONFile(bool deleteIfExists = false)
+        private async Task Initialize()
         {
-            if (!File.Exists(JSONFileFullPath))
+            using (FileStream stream = File.Open(ConfigurationFileFullPath, FileMode.OpenOrCreate))
             {
-                File.Create(JSONFileFullPath);
-                return true;
+                _configuration = await RetrieveConfigurationFromStorage(stream);
+
+                _configuration ??= await InitializeConfiguration(stream);
+
+                WordResponsesFileFullPath
+                    = Path.Combine(FileSystem.Current.CacheDirectory, _configuration.WordResponsesFileName);
             }
-            if (File.Exists(JSONFileFullPath) && deleteIfExists)
-            {
-                bool couldDelete = false;
-                while (!couldDelete)
-                {
-                    try
-                    {
-                        File.Delete(JSONFileFullPath);
-                        couldDelete = true;
-                    }
-                    catch (Exception) { }
-                }
-                File.Create(JSONFileFullPath);
-                return true;
-            }
-            return false;
         }
 
-        public async Task<List<WordResponseStorageModel>?> RetrieveWordResponsesFromStorage()
+        private async Task<ConfigurationModel> InitializeConfiguration(FileStream stream)
+        {
+            ConfigurationModel configuration = new ConfigurationModel
+            {
+                WordResponsesFileName = DefaultWordResponsesFileName,
+                StorageTime = DefaultStorageTime,
+            };
+
+            string jsonString = JsonSerializer.Serialize(configuration);
+
+            await WriteJsonData(jsonString, stream);
+
+            return configuration;
+        }
+
+        public async Task<ConfigurationModel?> RetrieveConfigurationFromStorage(FileStream stream)
+        {
+            ConfigurationModel? configuration = null;
+
+            try
+            {
+                configuration
+                    = await JsonSerializer.DeserializeAsync<ConfigurationModel>(stream);
+            }
+            catch (Exception)
+            {
+                ClearJSONFile(stream);
+            }
+
+            return configuration;
+        }
+
+        public void ClearJSONFile(FileStream stream)
+        {
+            try
+            {
+                stream.SetLength(0);
+            }
+            catch (Exception) { }
+        }
+
+        public async Task<List<WordResponseStorageModel>?> RetrieveWordResponsesFromStorage(FileStream stream)
         {
             List<WordResponseStorageModel>? wordResponsesFileCollection = null;
 
-            using (FileStream stream = File.Open(JSONFileFullPath, FileMode.Open))
+            try
             {
-                try
-                {
-                    wordResponsesFileCollection 
-                        = await JsonSerializer.DeserializeAsync<List<WordResponseStorageModel>?>(stream);
-                }
-                catch (Exception)
-                {
-                    stream.Close();
-                    CreateJSONFile(true);
-                }
+                wordResponsesFileCollection
+                    = await JsonSerializer.DeserializeAsync<List<WordResponseStorageModel>?>(stream);
+            }
+            catch (Exception)
+            {
+                ClearJSONFile(stream);
             }
 
             return wordResponsesFileCollection;
         }
 
-        public async Task WriteWordResponses(string jsonString)
-        {
-            await File.WriteAllTextAsync(JSONFileFullPath, jsonString);
-        }
+
+        public async Task WriteJsonData(string jsonString, FileStream stream) => await stream.WriteAsync(Encoding.UTF8.GetBytes(jsonString));
     }
 }

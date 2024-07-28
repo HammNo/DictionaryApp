@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-21T17:18:58.482</Modified>
+      <Modified>2024-07-28T21:05:42.399</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-21T17:14:16.213</Modified>
+      <Modified>2024-07-26T08:06:48.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DictionaryApp.runtimeconfig.json">
       <PackagePath>DictionaryApp.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DictionaryApp.dll">
       <PackagePath>DictionaryApp.dll</PackagePath>
-      <Modified>2024-07-21T17:18:58.058</Modified>
+      <Modified>2024-07-28T21:05:41.214</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DictionaryApp.exe</PackagePath>
-      <Modified>2024-07-21T17:18:58.063</Modified>
+      <Modified>2024-07-28T21:05:41.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -283,7 +283,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DictionaryApp.deps.json">
       <PackagePath>DictionaryApp.deps.json</PackagePath>
-      <Modified>2024-07-21T17:13:11.043</Modified>
+      <Modified>2024-07-26T08:06:47.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Solanin\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
