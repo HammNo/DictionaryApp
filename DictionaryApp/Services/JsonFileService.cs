@@ -1,4 +1,5 @@
-﻿using DictionaryApp.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using DictionaryApp.Models;
 using System.Text;
 using System.Text.Json;
 
@@ -10,10 +11,12 @@ namespace DictionaryApp.Services
         private const string DefaultWordResponsesFileName = "WordsCache.json";
         private const short DefaultStorageTime = 10;
 
+        private const string DefaultAPIKey = "a653454b-83d8-4522-97ec-e5e5a3e8b441";
+
         public string ConfigurationFileFullPath { get; set; } = string.Empty;
         private const string ConfigurationFileName = "Configuration.json";
 
-        private ConfigurationModel? _configuration = new();
+        public ConfigurationModel Configuration = new();
 
         public JsonFileService()
         {
@@ -26,12 +29,10 @@ namespace DictionaryApp.Services
         {
             using (FileStream stream = File.Open(ConfigurationFileFullPath, FileMode.OpenOrCreate))
             {
-                _configuration = await RetrieveConfigurationFromStorage(stream);
-
-                _configuration ??= await InitializeConfiguration(stream);
+                Configuration = await RetrieveConfigurationFromStorage(stream) ?? await InitializeConfiguration(stream);
 
                 WordResponsesFileFullPath
-                    = Path.Combine(FileSystem.Current.CacheDirectory, _configuration.WordResponsesFileName);
+                    = Path.Combine(FileSystem.Current.CacheDirectory, Configuration.WordResponsesFileName);
             }
         }
 
@@ -41,6 +42,7 @@ namespace DictionaryApp.Services
             {
                 WordResponsesFileName = DefaultWordResponsesFileName,
                 StorageTime = DefaultStorageTime,
+                APIKey = DefaultAPIKey
             };
 
             string jsonString = JsonSerializer.Serialize(configuration);

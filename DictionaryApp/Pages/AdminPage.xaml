@@ -2,7 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DictionaryApp.Pages.AdminPage"
+             xmlns:vm="clr-namespace:DictionaryApp.ViewModels"
+             x:DataType="vm:ConfigurationViewModel"
              Title="Admin">
+    
     <VerticalStackLayout>
+        <Entry Grid.Column="1" Placeholder="Storage time" ClearButtonVisibility="Never" 
+                HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="100" 
+                Text="{Binding ConfigurationModel.StorageTime}"/>
+        <Entry Grid.Column="1" Placeholder="API key" ClearButtonVisibility="Never"
+                HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="350"
+                Text="{Binding ConfigurationModel.APIKey}"/>
+        <Entry Grid.Column="1" Placeholder="File name" ClearButtonVisibility="Never"
+                HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="250"
+                Text="{Binding ConfigurationModel.WordResponsesFileName}"/>
+
+        <Button Text="Confirm" MaximumWidthRequest="120" IsEnabled="{Binding HasConfigurationChanged}"/>
     </VerticalStackLayout>
+    
 </ContentPage>

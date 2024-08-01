@@ -18,7 +18,7 @@ namespace DictionaryApp.Pages
             ClearImageButton.IsVisible = false;
         }
 
-        public async void OnCompleted(object sender, EventArgs e)
+        public async void OnWordEntryCompleted(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(Word.Text))
             {
@@ -38,8 +38,6 @@ namespace DictionaryApp.Pages
             Word.IsEnabled = false;
             Word.IsEnabled = true;
         }
-
-
 
         private void ManageWordResponsesCount()
         {

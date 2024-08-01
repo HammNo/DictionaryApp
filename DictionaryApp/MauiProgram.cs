@@ -24,9 +24,10 @@ namespace DictionaryApp
 #endif
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<AdminPage>();
-            builder.Services.AddTransient<DictionaryService>();
-            builder.Services.AddTransient<JsonFileService>();
-            builder.Services.AddTransient<WordResponsesViewModel>();
+            builder.Services.AddSingleton<DictionaryService>();
+            builder.Services.AddSingleton<JsonFileService>();
+            builder.Services.AddSingleton<WordResponsesViewModel>();
+            builder.Services.AddSingleton<ConfigurationViewModel>();
 
             return builder.Build();
         }

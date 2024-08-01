@@ -8,8 +8,6 @@ namespace DictionaryApp.Services
     public class DictionaryService
     {
         private const string DictionaryAPIUri = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/";
-        private const string APIKey = "a653454b-83d8-4522-97ec-e5e5a3e8b441";
-        private const int StorageTimeInMinutes = 10;
         private readonly JsonFileService _jsonFileService;
 
         public DictionaryService(JsonFileService jsonFileService)
@@ -60,7 +58,7 @@ namespace DictionaryApp.Services
 
             foreach (var wordOccurence in wordResponsesFileCollection)
             {
-                if (wordOccurence?.StorageDate.AddMinutes(StorageTimeInMinutes) < DateTime.Now)
+                if (wordOccurence?.StorageDate.AddMinutes(_jsonFileService.Configuration.StorageTime) < DateTime.Now)
                 {
                     wordResponsesFileCollectionCopy.Remove(wordOccurence);
                 }
@@ -89,7 +87,7 @@ namespace DictionaryApp.Services
             {
                 RestClientOptions options = new RestClientOptions(DictionaryAPIUri);
                 RestClient client = new(options);
-                wordResponses = await client.GetAsync<List<WordResponseModel>?>($"{requestedWord}?key={APIKey}");
+                wordResponses = await client.GetAsync<List<WordResponseModel>?>($"{requestedWord}?key={_jsonFileService.Configuration.APIKey}");
             }
             catch (Exception) {}
 

@@ -28,7 +28,7 @@
                     <ColumnDefinition Width=".2*" />
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Column="1" x:Name="Word" Placeholder="Type your word" Completed="OnCompleted" ClearButtonVisibility="Never" 
+                <Entry Grid.Column="1" x:Name="Word" Placeholder="Type your word" Completed="OnWordEntryCompleted" ClearButtonVisibility="Never" 
                        HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="200"/>
 
                 <ImageButton  Grid.Column="2" x:Name="ClearImageButton" Source="Resources/Images/clear_icon_red.png" Clicked="OnClearButtonClicked"
