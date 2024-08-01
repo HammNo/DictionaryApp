@@ -1,1 +1,0 @@
-C:\Users\Solanin\Documents\Fardes documents\Code\C#\source\repos\DictionaryApp\DictionaryApp\DictionaryApp.csproj;x64

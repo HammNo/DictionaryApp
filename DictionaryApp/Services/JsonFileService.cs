@@ -17,7 +17,7 @@ namespace DictionaryApp.Services
 
         public JsonFileService()
         {
-            ConfigurationFileFullPath = Path.Combine(FileSystem.Current.CacheDirectory, ConfigurationFileName);
+            ConfigurationFileFullPath = Path.Combine(FileSystem.Current.AppDataDirectory, ConfigurationFileName);
 
             _ = Initialize();
         }
@@ -92,8 +92,7 @@ namespace DictionaryApp.Services
 
             return wordResponsesFileCollection;
         }
-
-
+        
         public async Task WriteJsonData(string jsonString, FileStream stream) => await stream.WriteAsync(Encoding.UTF8.GetBytes(jsonString));
     }
 }
