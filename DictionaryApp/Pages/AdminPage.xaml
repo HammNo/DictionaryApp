@@ -26,7 +26,6 @@
                x:Name="WordResponsesFileName" Text="{Binding ConfigurationModel.WordResponsesFileName}"
                TextChanged="HasInputChanged"/>
 
-
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".3*" />
@@ -40,9 +39,11 @@
                          Grid.Column="1"
                          Clicked="OnConfirmButtonClicked"/>
 
-            <ImageButton x:Name="ResetButton" Source="Resources/Images/clear_icon_red" 
+            <ImageButton x:Name="ResetButton" Source="Resources/Images/reset_icon_orange" 
                          WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"
-                         Grid.Column="2"/>
+                         Grid.Column="2"
+                         Clicked="OnResetButtonClicked"/>
+
         </Grid>
 
     </VerticalStackLayout>

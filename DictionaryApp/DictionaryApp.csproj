@@ -67,6 +67,7 @@
 	  <None Remove="Resources\AppIcon\appicon.png" />
 	  <None Remove="Resources\Images\admin_icon.png" />
 	  <None Remove="Resources\Images\check_icon_green.png" />
+	  <None Remove="Resources\Images\reset_icon_orange.png" />
 	  <None Remove="Resources\Images\search_icon.png" />
 	  <None Remove="Resources\Splash\splash.png" />
 	</ItemGroup>

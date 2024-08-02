@@ -44,6 +44,13 @@ namespace DictionaryApp.ViewModels
             return false;
         }
 
+        public async Task Reset()
+        {
+            await _jsonFileService.ResetConfiguration();
+
+            MapInternalConfiguration();
+        }
+
         private void MapInternalConfiguration()
         {
             ConfigurationModel = new ConfigurationModel

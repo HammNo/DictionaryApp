@@ -26,10 +26,13 @@ namespace DictionaryApp.Services
             _ = Initialize();
         }
 
-        private async Task Initialize()
+        private async Task Initialize(bool reset = false)
         {
             using (FileStream stream = File.Open(ConfigurationFileFullPath, FileMode.OpenOrCreate))
             {
+                if (reset)
+                    ClearJSONFile(stream);
+
                 Configuration = await RetrieveConfigurationFromStorage(stream) ?? await InitializeConfiguration(stream);
 
                 WordResponsesFileFullPath
@@ -123,5 +126,7 @@ namespace DictionaryApp.Services
         }
         
         public async Task WriteJsonData(string jsonString, FileStream stream) => await stream.WriteAsync(Encoding.UTF8.GetBytes(jsonString));
+
+        public async Task ResetConfiguration() => await Initialize(true);
     }
 }

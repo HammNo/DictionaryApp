@@ -26,6 +26,13 @@ public partial class AdminPage : ContentPage
         HasInputChanged();
     }
 
+    private async void OnResetButtonClicked(object sender, EventArgs e)
+    {
+        await _configurationViewModel.Reset();
+
+        HasInputChanged();
+    }
+
     private void HasInputChanged()
     {
         if (_configurationViewModel.HasChanged())
