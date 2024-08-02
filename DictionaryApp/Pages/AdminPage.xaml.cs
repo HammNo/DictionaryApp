@@ -17,29 +17,11 @@ public partial class AdminPage : ContentPage
 
     private void HasInputChanged(object sender, TextChangedEventArgs e) => HasInputChanged();
 
-    private async void ButtonClicked_EventHandler(object sender, EventArgs e)
+    private async void OnConfirmButtonClicked(object sender, EventArgs e)
     {
         EntriesKeyboardReset();
 
-        await _configurationViewModel.WriteChanges();
-
-        Color backgroundColor = Colors.DarkSeaGreen;
-        string message = "Configuration changed";
-
-        //Problème avec affichage Snackbar sous Windows
-        if (DeviceInfo.Current.Platform != DevicePlatform.WinUI)
-        {
-            ISnackbar snackbar = Snackbar.Make(message, actionButtonText: string.Empty,
-                                            duration: TimeSpan.FromSeconds(3),
-                                            visualOptions: new SnackbarOptions
-                                            {
-                                                TextColor = Colors.Black,
-                                                CornerRadius = 30,
-                                                BackgroundColor = backgroundColor
-                                            });
-
-            await snackbar.Show();
-        }
+        ConfigurationUpdateShowSnackbar(await _configurationViewModel.WriteChanges());
 
         HasInputChanged();
     }
@@ -61,4 +43,38 @@ public partial class AdminPage : ContentPage
         APIKey.IsEnabled = true;
         WordResponsesFileName.IsEnabled = true;
     }
+
+    private async void ConfigurationUpdateShowSnackbar(bool updated)
+    {
+        Color backgroundColor;
+        string message;
+
+        if (updated)
+        {
+            backgroundColor = Colors.DarkSeaGreen;
+            message = "Configuration updated";
+        }
+        else
+        {
+            message = "The configuration could no be updated";
+            backgroundColor = Colors.Salmon;
+        }
+
+
+        //Problème avec affichage Snackbar sous Windows
+        if (DeviceInfo.Current.Platform != DevicePlatform.WinUI)
+        {
+            ISnackbar snackbar = Snackbar.Make(message, actionButtonText: string.Empty,
+                                            duration: TimeSpan.FromSeconds(3),
+                                            visualOptions: new SnackbarOptions
+                                            {
+                                                TextColor = Colors.Black,
+                                                CornerRadius = 30,
+                                                BackgroundColor = backgroundColor
+                                            });
+
+            await snackbar.Show();
+        }
+    }
+
 }

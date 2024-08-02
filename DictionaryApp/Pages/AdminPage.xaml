@@ -7,22 +7,44 @@
              Title="Admin">
     
     <VerticalStackLayout>
-        
+
+        <Label Text="Storage time" HorizontalTextAlignment="Center" Margin="0,0,0,0" FontAttributes="Bold"/>
         <Entry Grid.Column="1" Placeholder="Storage time" ClearButtonVisibility="Never" 
                HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="100" 
                x:Name="StorageTime" Text="{Binding ConfigurationModel.StorageTime}"
                TextChanged="HasInputChanged"/>
+
+        <Label Text="API key" HorizontalTextAlignment="Center" Margin="0,0,0,0" FontAttributes="Bold"/>
         <Entry Grid.Column="1" Placeholder="API key" ClearButtonVisibility="Never"
                HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="350"
                x:Name="APIKey" Text="{Binding ConfigurationModel.APIKey}"
                TextChanged="HasInputChanged"/>
+
+        <Label Text="Word storage file" HorizontalTextAlignment="Center" Margin="0,0,0,0" FontAttributes="Bold"/>
         <Entry Grid.Column="1" Placeholder="File name" ClearButtonVisibility="Never"
                HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="250"
                x:Name="WordResponsesFileName" Text="{Binding ConfigurationModel.WordResponsesFileName}"
                TextChanged="HasInputChanged"/>
 
-        <Button x:Name="ConfirmButton" Text="Confirm" MaximumWidthRequest="120" Clicked="ButtonClicked_EventHandler"/>
-        
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*" />
+                <ColumnDefinition Width=".2*" />
+                <ColumnDefinition Width=".2*" />
+                <ColumnDefinition Width=".3*" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton x:Name="ConfirmButton" Source="Resources/Images/check_icon_green.png" 
+                         WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"
+                         Grid.Column="1"
+                         Clicked="OnConfirmButtonClicked"/>
+
+            <ImageButton x:Name="ResetButton" Source="Resources/Images/clear_icon_red" 
+                         WidthRequest="40" HeightRequest="40" HorizontalOptions="Center"
+                         Grid.Column="2"/>
+        </Grid>
+
     </VerticalStackLayout>
     
 </ContentPage>

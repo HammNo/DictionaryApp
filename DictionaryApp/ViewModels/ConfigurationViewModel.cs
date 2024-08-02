@@ -28,14 +28,20 @@ namespace DictionaryApp.ViewModels
                 return false;
         }
 
-        public async Task WriteChanges()
+        public async Task<bool> WriteChanges()
         {
+            ConfigurationModel? configuration = null;
+
             if (HasChanged())
             {
-                await _jsonFileService.WriteNewConfiguration(ConfigurationModel);
+                configuration = await _jsonFileService.WriteNewConfiguration(ConfigurationModel);
 
                 MapInternalConfiguration();
             }
+
+            if (configuration != null)
+                return true;
+            return false;
         }
 
         private void MapInternalConfiguration()
