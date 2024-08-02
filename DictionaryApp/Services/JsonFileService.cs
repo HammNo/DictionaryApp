@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace DictionaryApp.Services
 {
-    public class JsonFileService
+    public partial class JsonFileService : ObservableObject
     {
         public string WordResponsesFileFullPath { get; set; } = string.Empty;
         private const string DefaultWordResponsesFileName = "WordsCache.json";
@@ -16,7 +16,8 @@ namespace DictionaryApp.Services
         public string ConfigurationFileFullPath { get; set; } = string.Empty;
         private const string ConfigurationFileName = "Configuration.json";
 
-        public ConfigurationModel Configuration = new();
+        [ObservableProperty]
+        public ConfigurationModel configuration = new();
 
         public JsonFileService()
         {
@@ -67,6 +68,32 @@ namespace DictionaryApp.Services
             }
 
             return configuration;
+        }
+
+        public async Task<ConfigurationModel?> WriteNewConfiguration(ConfigurationModel newConfiguration)
+        {
+            try
+            {
+                using (FileStream stream = File.Open(ConfigurationFileFullPath, FileMode.OpenOrCreate))
+                {
+                    ClearJSONFile(stream);
+
+                    string jsonString = JsonSerializer.Serialize(newConfiguration);
+
+                    await WriteJsonData(jsonString, stream);
+
+                    Configuration = newConfiguration;
+
+                    WordResponsesFileFullPath
+                        = Path.Combine(FileSystem.Current.CacheDirectory, Configuration.WordResponsesFileName);
+                }
+
+                return Configuration;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public void ClearJSONFile(FileStream stream)

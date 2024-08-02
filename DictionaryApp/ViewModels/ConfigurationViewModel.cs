@@ -7,7 +7,7 @@ namespace DictionaryApp.ViewModels
     public partial class ConfigurationViewModel : ObservableObject
     {
         [ObservableProperty]
-        public ConfigurationModel configurationModel;
+        public ConfigurationModel configurationModel = new();
 
         private readonly JsonFileService _jsonFileService;
 
@@ -15,21 +15,37 @@ namespace DictionaryApp.ViewModels
         {
             _jsonFileService = jsonFileService;
 
-            configurationModel = new ConfigurationModel
-            {
-                APIKey = _jsonFileService.Configuration.APIKey,
-                StorageTime = _jsonFileService.Configuration.StorageTime,
-                WordResponsesFileName = _jsonFileService.Configuration.WordResponsesFileName
-            };
+            MapInternalConfiguration();
         }
 
-        private bool HasChanged()
+        public bool HasChanged()
         {
             if (ConfigurationModel.APIKey != _jsonFileService.Configuration.APIKey
                 || ConfigurationModel.StorageTime != _jsonFileService.Configuration.StorageTime
                 || ConfigurationModel.WordResponsesFileName != _jsonFileService.Configuration.WordResponsesFileName)
                 return true;
-            return false;
+           else 
+                return false;
+        }
+
+        public async Task WriteChanges()
+        {
+            if (HasChanged())
+            {
+                await _jsonFileService.WriteNewConfiguration(ConfigurationModel);
+
+                MapInternalConfiguration();
+            }
+        }
+
+        private void MapInternalConfiguration()
+        {
+            ConfigurationModel = new ConfigurationModel
+            {
+                APIKey = _jsonFileService.Configuration.APIKey,
+                StorageTime = _jsonFileService.Configuration.StorageTime,
+                WordResponsesFileName = _jsonFileService.Configuration.WordResponsesFileName
+            };
         }
     }
 }
