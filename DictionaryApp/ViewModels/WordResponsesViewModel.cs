@@ -2,6 +2,7 @@
 using DictionaryApp.Models;
 using DictionaryApp.Services;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace DictionaryApp.ViewModels
 {
@@ -10,7 +11,7 @@ namespace DictionaryApp.ViewModels
         public ObservableCollection<WordResponseModel> ModifiedWordResponsesList { get; set; } = [];
         private readonly ObservableCollection<WordResponseModel> _originalResponsesList = [];
         private readonly DictionaryService _dictionaryService;
-        private const int DefinitionMaxSize = 80;
+        private const int DefinitionMaxSize = 10;
 
         public WordResponsesViewModel(DictionaryService dictionaryService)
         {
@@ -29,7 +30,7 @@ namespace DictionaryApp.ViewModels
 
         private WordResponseModel ProcessWordResponse(WordResponseModel wordResponse)
         {
-            WordResponseModel wordResponseCopy = (WordResponseModel)wordResponse.Clone();
+            WordResponseModel wordResponseCopy = wordResponse.DeepCopy();
 
             if (wordResponseCopy.Meta.Id.Contains(':'))
                 wordResponseCopy.Meta.Id = wordResponseCopy.Meta.Id.Split(':')[0];
@@ -39,5 +40,10 @@ namespace DictionaryApp.ViewModels
                 wordResponseCopy.ShortDef[0] = $"{wordResponseCopy.ShortDef[0][..DefinitionMaxSize]} [...]";
             return wordResponseCopy;
         }
+
+        public ICommand ExpandWordCommand => new Command<WordResponseModel>((item) =>
+        {
+            item.Fl = "test";
+        });
     }
 }

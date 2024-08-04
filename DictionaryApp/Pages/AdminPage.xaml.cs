@@ -31,6 +31,8 @@ public partial class AdminPage : ContentPage
         await _configurationViewModel.Reset();
 
         HasInputChanged();
+
+        ConfigurationResethowSnackbar();
     }
 
     private void HasInputChanged()
@@ -84,4 +86,21 @@ public partial class AdminPage : ContentPage
         }
     }
 
+    private async void ConfigurationResethowSnackbar()
+    {
+        //Problème avec affichage Snackbar sous Windows
+        if (DeviceInfo.Current.Platform != DevicePlatform.WinUI)
+        {
+            ISnackbar snackbar = Snackbar.Make("Configuration reseted", actionButtonText: string.Empty,
+                                            duration: TimeSpan.FromSeconds(3),
+                                            visualOptions: new SnackbarOptions
+                                            {
+                                                TextColor = Colors.Black,
+                                                CornerRadius = 30,
+                                                BackgroundColor = Colors.Orange
+                                            });
+
+            await snackbar.Show();
+        }
+    }
 }

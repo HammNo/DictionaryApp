@@ -40,37 +40,42 @@
                    FontAttributes="Italic" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
 
          </VerticalStackLayout>
+        
 
         <CollectionView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
                         x:Name="WordsCollectionView" ItemsLayout="VerticalList" EmptyView=""
+                                                IsGrouped="True" 
                         ItemsSource="{Binding ModifiedWordResponsesList}">
-            
-            <CollectionView.ItemTemplate>
-                
+
+            <CollectionView.GroupHeaderTemplate>
+
                 <DataTemplate x:DataType="vm:WordResponseModel">
-                    
-                    <Frame Margin="10" Padding="15,10,15,10" HeightRequest="100">
-                        
+
+                    <Frame Margin="10" Padding="15,10,15,10" MinimumHeightRequest="50">
+
                         <VerticalStackLayout HorizontalOptions="Center">
-                            
+
                             <Label Margin="0,0,0,10" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
                                 <Label.Text>
                                     <MultiBinding StringFormat="{}{0} ({1})">
                                         <Binding Path="Meta.Id" />
-                                        <Binding Path="Fl" />
+                                        <Binding Path="Fl" Mode="TwoWay"/>
                                     </MultiBinding>
                                 </Label.Text>
+
                             </Label>
-                            
-                            <Label Text="{Binding ShortDef[0]}" HorizontalOptions="Center" FontSize="15"/>
-                            
+
+                            <VerticalStackLayout.GestureRecognizers >
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:WordResponsesViewModel}}, 
+                                                                Path=ExpandWordCommand}" CommandParameter="{Binding .}"/>
+                            </VerticalStackLayout.GestureRecognizers >
+
                         </VerticalStackLayout>
-                        
+
                     </Frame>
-                    
+
                 </DataTemplate>
-                
-            </CollectionView.ItemTemplate>
+            </CollectionView.GroupHeaderTemplate>
 
         </CollectionView>
         

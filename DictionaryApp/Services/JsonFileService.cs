@@ -23,7 +23,16 @@ namespace DictionaryApp.Services
         {
             ConfigurationFileFullPath = Path.Combine(FileSystem.Current.AppDataDirectory, ConfigurationFileName);
 
-            _ = Initialize();
+            InitializeFireAndForget();
+        }
+
+        private async void InitializeFireAndForget()
+        {
+            try
+            {
+                await Initialize();
+            }
+            catch (Exception) {}        
         }
 
         private async Task Initialize(bool reset = false)

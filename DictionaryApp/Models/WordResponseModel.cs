@@ -1,10 +1,17 @@
-﻿namespace DictionaryApp.Models
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+
+namespace DictionaryApp.Models
 {
-    public class WordResponseModel : ICloneable
+    public partial class WordResponseModel : ObservableObject
     {
         public Meta Meta { get; set; } = default!;
+
         public List<string> ShortDef { get; set; } = default!;
-        public string Fl { get; set; } = string.Empty;
+
+        [ObservableProperty]
+        public string fl = string.Empty;
 
         public WordResponseModel() {}
 
@@ -14,9 +21,11 @@
             ShortDef = shortDef;
         }
 
-        public object Clone()
+
+        public WordResponseModel DeepCopy()
         {
-            return MemberwiseClone();
+            string serializedObject = JsonConvert.SerializeObject(this);
+            return JsonConvert.DeserializeObject<WordResponseModel>(serializedObject);
         }
     }
 
