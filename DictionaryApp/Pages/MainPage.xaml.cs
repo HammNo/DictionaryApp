@@ -63,7 +63,7 @@ namespace DictionaryApp.Pages
                                         {
                                             TextColor = Colors.Black,
                                             CornerRadius = 30,
-                                            BackgroundColor = Colors.Orange
+                                            BackgroundColor = Colors.DarkSeaGreen
                                         });
                 await snackbar.Show();
             }

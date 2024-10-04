@@ -1,12 +1,15 @@
 using CommunityToolkit.Maui.Core;
 using DictionaryApp.ViewModels;
 using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Mvvm.Input;
 
 namespace DictionaryApp.Pages;
 
 public partial class AdminPage : ContentPage
 {
     private readonly ConfigurationViewModel _configurationViewModel;
+
+    public RelayCommand DoInit { get; set; } = default!;
 
     public AdminPage(ConfigurationViewModel configurationViewModel)
 	{

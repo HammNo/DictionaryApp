@@ -4,7 +4,8 @@
              xmlns:vm="clr-namespace:DictionaryApp.Models"
              x:Class="DictionaryApp.Pages.MainPage"
              xmlns:viewmodel="clr-namespace:DictionaryApp.ViewModels"
-             x:DataType="viewmodel:WordResponsesViewModel">
+             x:DataType="viewmodel:WordResponsesViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
     <Grid>
 
@@ -53,25 +54,52 @@
 
                     <Frame Margin="10" Padding="15,10,15,10" MinimumHeightRequest="50">
 
-                        <VerticalStackLayout HorizontalOptions="Center">
+                        <toolkit:Expander>
 
-                            <Label Margin="0,0,0,10" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
-                                <Label.Text>
-                                    <MultiBinding StringFormat="{}{0} ({1})">
-                                        <Binding Path="Meta.Id" />
-                                        <Binding Path="Fl" Mode="TwoWay"/>
-                                    </MultiBinding>
-                                </Label.Text>
+                            <toolkit:Expander.Header Margin="0,0,0,0">
+                                <Label Margin="0,0,0,0" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} ({1})">
+                                            <Binding Path="Meta.Id" />
+                                            <Binding Path="Fl" Mode="TwoWay"/>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </toolkit:Expander.Header>
 
-                            </Label>
+                            <VerticalStackLayout Margin="0,10,0,10">
 
-                            <VerticalStackLayout.GestureRecognizers >
-                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:WordResponsesViewModel}}, 
-                                                                Path=ExpandWordCommand}" CommandParameter="{Binding .}"/>
-                            </VerticalStackLayout.GestureRecognizers >
+                                <CollectionView EmptyView=""
+                                                ItemsSource="{Binding ShortDef}"
+                                                x:Name="ShortDefinitions">
 
-                        </VerticalStackLayout>
+                                    <CollectionView.ItemsLayout>
+                                        <LinearItemsLayout Orientation="Vertical"
+                                                               ItemSpacing="5" />
+                                    </CollectionView.ItemsLayout>
 
+                                    <CollectionView.GroupHeaderTemplate >
+
+                                        <DataTemplate>
+
+                                            <Label HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
+                                                <Label.Text>
+                                                    <MultiBinding StringFormat="{}{0}">
+                                                        <Binding Path="."/>
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
+
+                                        </DataTemplate>
+
+                                    </CollectionView.GroupHeaderTemplate>
+
+                                </CollectionView>
+
+                            </VerticalStackLayout>
+                            
+                        </toolkit:Expander>
+                        
                     </Frame>
 
                 </DataTemplate>

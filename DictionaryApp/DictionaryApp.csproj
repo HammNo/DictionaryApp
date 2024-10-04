@@ -84,6 +84,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Configurations\" />
+	  <Folder Include="Converters\" />
 	  <Folder Include="Handlers\" />
 	</ItemGroup>
 
