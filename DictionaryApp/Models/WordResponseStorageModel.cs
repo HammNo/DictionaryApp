@@ -7,7 +7,7 @@
 
         public WordResponseStorageModel() {}
 
-        public WordResponseStorageModel(Meta meta, List<string> shortDef) 
-            : base(meta, shortDef) { }
+        public WordResponseStorageModel(Meta meta, List<string> shortDef, HeadwordInformation hwi) 
+            : base(meta, shortDef, hwi) { }
     }
 }

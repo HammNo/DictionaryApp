@@ -10,6 +10,8 @@ namespace DictionaryApp.Pages
     {
         private readonly WordResponsesViewModel _wordResponsesViewModel;
 
+        private IReadOnlyList<IVisualTreeElement>? rootViews;
+
         public MainPage(WordResponsesViewModel wordResponsesViewModel)
         {
             InitializeComponent();
@@ -103,5 +105,13 @@ namespace DictionaryApp.Pages
 
         }
 
+        void OnPlayPauseButtonClicked(object sender, EventArgs args)
+        {
+            var button = sender as Button;
+            var player = button?.BindingContext as MediaElement;
+            player?.Play();
+            Task.Delay((int)player?.Duration.TotalMilliseconds);
+            player.SeekTo(TimeSpan.Zero);
+        }
     }
 }

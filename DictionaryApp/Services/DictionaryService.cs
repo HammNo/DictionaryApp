@@ -45,12 +45,12 @@ namespace DictionaryApp.Services
                 = await _jsonFileService.RetrieveWordResponsesFromStorage(stream);
 
             if (wordResponsesFileCollection != null)
-                (wordResponses, wordResponsesFileCollection) = await ReadWordFromJSON(requestedWord, wordResponsesFileCollection, stream);
+                (wordResponses, wordResponsesFileCollection) = ReadWordFromJSON(requestedWord, wordResponsesFileCollection, stream);
 
             return (wordResponses, wordResponsesFileCollection);
         }
 
-        private async Task<(List<WordResponseStorageModel>?, List<WordResponseStorageModel>?)> ReadWordFromJSON(string requestedWord, List<WordResponseStorageModel> wordResponsesFileCollection, FileStream stream)
+        private (List<WordResponseStorageModel>?, List<WordResponseStorageModel>?) ReadWordFromJSON(string requestedWord, List<WordResponseStorageModel> wordResponsesFileCollection, FileStream stream)
         {
             List<WordResponseStorageModel>? wordResponses = null;
 

@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:DictionaryApp.Models"
+             xmlns:local="clr-namespace:DictionaryApp.Converters"
              x:Class="DictionaryApp.Pages.MainPage"
              xmlns:viewmodel="clr-namespace:DictionaryApp.ViewModels"
              x:DataType="viewmodel:WordResponsesViewModel"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+
+    <ContentPage.Resources>
+        <local:NullableToBoolConverter x:Key="NullableToBool" />
+        <local:AudioStringToReferenceConverter x:Key="AudioStringToReference" />
+    </ContentPage.Resources>
 
     <Grid>
 
@@ -45,29 +51,39 @@
 
         <CollectionView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
                         x:Name="WordsCollectionView" ItemsLayout="VerticalList" EmptyView=""
-                                                IsGrouped="True" 
+                        IsGrouped="True" 
                         ItemsSource="{Binding ModifiedWordResponsesList}">
 
             <CollectionView.GroupHeaderTemplate>
 
                 <DataTemplate x:DataType="vm:WordResponseModel">
 
-                    <Frame Margin="10" Padding="15,10,15,10" MinimumHeightRequest="50">
+                    <Border Margin="10" Padding="0" StrokeThickness="1" BackgroundColor="#111">
 
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+                        
                         <toolkit:Expander>
 
                             <toolkit:Expander.Header Margin="0,0,0,0">
-                                <Label Margin="0,0,0,0" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
-                                    <Label.Text>
-                                        <MultiBinding StringFormat="{}{0} ({1})">
-                                            <Binding Path="Meta.Id" />
-                                            <Binding Path="Fl" Mode="TwoWay"/>
-                                        </MultiBinding>
-                                    </Label.Text>
-                                </Label>
+
+                                <Border MinimumHeightRequest="50" Margin="0" StrokeThickness="0" BackgroundColor="Black">
+                                    
+                                    <Label Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="Center" FontSize="15" FontAttributes="Bold">
+                                        <Label.Text>
+                                            <MultiBinding StringFormat="{}{0} ({1})">
+                                                <Binding Path="Meta.Id" />
+                                                <Binding Path="Fl" Mode="TwoWay"/>
+                                            </MultiBinding>
+                                        </Label.Text>
+                                    </Label>
+                                    
+                                </Border>
+                                
                             </toolkit:Expander.Header>
 
-                            <VerticalStackLayout Margin="0,10,0,10">
+                            <VerticalStackLayout Margin="0" Padding="10">
 
                                 <CollectionView EmptyView=""
                                                 ItemsSource="{Binding ShortDef}"
@@ -82,7 +98,7 @@
 
                                         <DataTemplate>
 
-                                            <Label HorizontalOptions="Center" FontSize="15" FontAttributes="Bold">
+                                            <Label HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" >
                                                 <Label.Text>
                                                     <MultiBinding StringFormat="{}{0}">
                                                         <Binding Path="."/>
@@ -96,11 +112,37 @@
 
                                 </CollectionView>
 
+
+                                <VerticalStackLayout IsVisible="{Binding Converter={StaticResource NullableToBool}, Path=Hwi.Prs}"
+                                                     Margin="0,10,0,0">
+                                    
+                                    <toolkit:MediaElement Source="{Binding Converter={StaticResource AudioStringToReference}, Path=Hwi.Prs[0].Sound.Audio}"
+                                                          ShouldAutoPlay="False"
+                                                          ShouldLoopPlayback="False"
+                                                          x:Name="PronunciationPlayer"/>
+
+                                    <HorizontalStackLayout HorizontalOptions="Center"
+                                                           BindingContext="{x:Reference PronunciationPlayer}">
+
+                                        <Button Text=""
+                                                HorizontalOptions="Center"
+                                                Clicked="OnPlayPauseButtonClicked"
+                                                ImageSource="Resources/Images/reset_icon_orange"
+                                                TextColor="White"
+                                                HeightRequest="35"
+                                                WidthRequest="50"
+                                                Padding="5"
+                                                BackgroundColor="#427a51">
+                                        </Button>
+
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+
                             </VerticalStackLayout>
                             
                         </toolkit:Expander>
                         
-                    </Frame>
+                    </Border>
 
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>

@@ -10,7 +10,8 @@ namespace DictionaryApp.Extensions
             {
                 Meta = wordResponse.Meta,
                 ShortDef = wordResponse.ShortDef,
-                Fl = wordResponse.Fl
+                Fl = wordResponse.Fl,
+                Hwi = wordResponse.Hwi
             };
         } 
     }
