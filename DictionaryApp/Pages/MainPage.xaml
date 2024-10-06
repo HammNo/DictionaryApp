@@ -35,7 +35,7 @@
                     <ColumnDefinition Width=".2*" />
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Column="1" x:Name="Word" Placeholder="Type your word" Completed="OnWordEntryCompleted" ClearButtonVisibility="Never" 
+                <Entry Grid.Column="1" x:Name="Word" Placeholder="Type a word" Completed="OnWordEntryCompleted" ClearButtonVisibility="Never" 
                        HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,10" MaximumWidthRequest="200"/>
 
                 <ImageButton  Grid.Column="2" x:Name="ClearImageButton" Source="Resources/Images/clear_icon_red.png" Clicked="OnClearButtonClicked"
@@ -43,7 +43,7 @@
                         
             </Grid>
 
-            <Label Text="No result" x:Name="ResultsCountLabel" FontSize="13" 
+            <Label Text="" x:Name="ResultsCountLabel" FontSize="13" 
                    FontAttributes="Italic" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
 
          </VerticalStackLayout>
@@ -58,17 +58,17 @@
 
                 <DataTemplate x:DataType="vm:WordResponseModel">
 
-                    <Border Margin="10" Padding="0" StrokeThickness="1" BackgroundColor="#111">
+                    <Border Margin="10" Padding="0" StrokeThickness="1" BackgroundColor="#222">
 
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10" />
                         </Border.StrokeShape>
                         
-                        <toolkit:Expander>
+                        <toolkit:Expander IsExpanded="False">
 
                             <toolkit:Expander.Header Margin="0,0,0,0">
 
-                                <Border MinimumHeightRequest="50" Margin="0" StrokeThickness="0" BackgroundColor="Black">
+                                <Border MinimumHeightRequest="50" Margin="0" StrokeThickness="0" BackgroundColor="#101010">
                                     
                                     <Label Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="Center" FontSize="15" FontAttributes="Bold">
                                         <Label.Text>
@@ -112,31 +112,32 @@
 
                                 </CollectionView>
 
-
-                                <VerticalStackLayout IsVisible="{Binding Converter={StaticResource NullableToBool}, Path=Hwi.Prs}"
-                                                     Margin="0,10,0,0">
+                                <StackLayout IsVisible="{Binding Converter={StaticResource NullableToBool}, Path=Hwi.Prs}"
+                                             Margin="0,10,0,0" >
                                     
                                     <toolkit:MediaElement Source="{Binding Converter={StaticResource AudioStringToReference}, Path=Hwi.Prs[0].Sound.Audio}"
                                                           ShouldAutoPlay="False"
                                                           ShouldLoopPlayback="False"
-                                                          x:Name="PronunciationPlayer"/>
+                                                          x:Name="PronunciationPlayer"
+                                                          WidthRequest="0"/>
 
-                                    <HorizontalStackLayout HorizontalOptions="Center"
-                                                           BindingContext="{x:Reference PronunciationPlayer}">
+                                    <StackLayout HorizontalOptions="Center"
+                                                 VerticalOptions="Center"
+                                                 BindingContext="{x:Reference PronunciationPlayer}">
 
-                                        <Button Text=""
-                                                HorizontalOptions="Center"
+                                        <Button HorizontalOptions="Center"
+                                                VerticalOptions="Center"
                                                 Clicked="OnPlayPauseButtonClicked"
-                                                ImageSource="Resources/Images/reset_icon_orange"
-                                                TextColor="White"
+                                                ImageSource="Resources/Images/play_icon_green"
                                                 HeightRequest="35"
                                                 WidthRequest="50"
                                                 Padding="5"
-                                                BackgroundColor="#427a51">
+                                                BackgroundColor="Transparent">
                                         </Button>
 
-                                    </HorizontalStackLayout>
-                                </VerticalStackLayout>
+                                    </StackLayout>
+                                    
+                                </StackLayout>
 
                             </VerticalStackLayout>
                             

@@ -15,9 +15,12 @@ namespace DictionaryApp.Pages
         public MainPage(WordResponsesViewModel wordResponsesViewModel)
         {
             InitializeComponent();
+
             BindingContext = wordResponsesViewModel;
             _wordResponsesViewModel = wordResponsesViewModel;
             ClearImageButton.IsVisible = false;
+
+            EnsureCloseExpander();
         }
 
         public async void OnWordEntryCompleted(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace DictionaryApp.Pages
         {
             Word.Text = string.Empty;
             _wordResponsesViewModel.ModifiedWordResponsesList.Clear();
-            ManageWordResponsesCount();
+            ResultsCountLabel.Text = string.Empty;
             ClearImageButton.IsVisible = false;
 
             //Problème avec affichage Snackbar sous Windows
@@ -105,13 +108,32 @@ namespace DictionaryApp.Pages
 
         }
 
-        void OnPlayPauseButtonClicked(object sender, EventArgs args)
+        private void OnPlayPauseButtonClicked(object sender, EventArgs args)
         {
             var button = sender as Button;
             var player = button?.BindingContext as MediaElement;
             player?.Play();
             Task.Delay((int)player?.Duration.TotalMilliseconds);
             player.SeekTo(TimeSpan.Zero);
+        }
+
+        private void EnsureCloseExpander()
+        {
+            WordsCollectionView.ChildAdded += (sender, e) =>
+            {
+                var borderElement = e.Element as Border;
+
+                if (borderElement != null)
+                {
+                    var children = borderElement.GetVisualTreeDescendants();
+
+                    foreach (var child in children)
+                    {
+                        if (child is Expander expander)
+                            expander.IsExpanded = false;
+                    }
+                }
+            };
         }
     }
 }
